@@ -4,14 +4,21 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Title>NotiSendDotNet</Title>
+        <Authors>Rodion Mostovoy</Authors>
+        <Description>NotiSend API client</Description>
+        <Copyright>Rodion Mostovoy</Copyright>
+        <PackageProjectUrl>https://github.com/rodion-m/NotiSendDotNet</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/rodion-m/NotiSendDotNet/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/rodion-m/NotiSendDotNet</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Refit" Version="6.3.2"/>
+        <PackageReference Include="Refit" Version="6.3.2" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\NotiSendDotNet.Models\NotiSendDotNet.Models.csproj"/>
+        <ProjectReference Include="..\NotiSendDotNet.Models\NotiSendDotNet.Models.csproj" />
     </ItemGroup>
 
 </Project>

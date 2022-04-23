@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using NotiSendDotNet.Models.Requests;
+using NotiSendDotNet.Models.Responses;
 using Refit;
 using Xunit;
 
@@ -17,8 +18,9 @@ public partial class ClientTests
             from, "Почтальон Печкин",  to, "Заметка", "Все в порядке");
         try
         {
-            var response = await client.SendEmail(request);
+            SendEmailResponse response = await client.SendEmail(request);
             Assert.Equal(request.To, response.To);
+            Assert.Equal("queued", response.Status);
             Assert.NotEqual(0, response.Id);
         }
         catch (ApiException e)
