@@ -1,5 +1,5 @@
 ﻿# NotiSend API-клиент
-![Nuget]()
+[![Nuget](https://img.shields.io/nuget/v/NotiSendDotNet?style=for-the-badge)](https://www.nuget.org/packages/NotiSendDotNet/)
 
 API-клиент для взаимодействия с сервисом NotiSend (.NET 6)
 

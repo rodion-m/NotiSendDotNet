@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Title>NotiSendDotNet</Title>
@@ -9,9 +8,19 @@
         <Description>NotiSend API client</Description>
         <Copyright>Rodion Mostovoy</Copyright>
         <PackageProjectUrl>https://github.com/rodion-m/NotiSendDotNet</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/rodion-m/NotiSendDotNet/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/rodion-m/NotiSendDotNet</RepositoryUrl>
+        <RepositoryType>public</RepositoryType>
+        <README>https://github.com/rodion-m/NotiSendDotNet/blob/master/README.MD</README>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Refit" Version="6.3.2" />
