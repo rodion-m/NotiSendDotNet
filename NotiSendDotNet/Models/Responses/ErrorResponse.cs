@@ -2,6 +2,7 @@
 // ReSharper disable ClassNeverInstantiated.Global
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
+#pragma warning disable CS8618
 
 namespace NotiSendDotNet.Models.Responses;
 

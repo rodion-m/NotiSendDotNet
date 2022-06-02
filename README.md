@@ -9,8 +9,7 @@ API-клиент для взаимодействия с сервисом NotiSen
 # Использование
 ```csharp
 var client = INotiSendClient.Create(authToken);
-var request = new SendEmailRequest(
-    from, "Почтальон Печкин",  to, "Заметка", "Все в порядке");
+var request = new SendEmailRequest(from, "Почтальон Печкин",  to, "Заметка", "Все в порядке");
 SendEmailResponse response = await client.SendEmail(request);
 if (response.Status == "queued")
 {

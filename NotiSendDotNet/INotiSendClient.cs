@@ -18,28 +18,27 @@ public interface INotiSendClient
     )
     {
         if (authToken == null) throw new ArgumentNullException(nameof(authToken));
-        return RestService.For<INotiSendClient>(new HttpClient(new AuthHeaderHandler(authToken))
+        var httpClient = new HttpClient(new AuthHeaderHandler(authToken))
         {
             BaseAddress = new Uri(host)
-        });
+        };
+        return RestService.For<INotiSendClient>(httpClient);
     }
 
     private class AuthHeaderHandler : DelegatingHandler
     {
         private readonly string _token;
 
-        public AuthHeaderHandler(string token)
+        public AuthHeaderHandler(string token) : base(new HttpClientHandler())
         {
             _token = token ?? throw new ArgumentNullException(nameof(token));
-            InnerHandler = new HttpClientHandler();
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
-            request.Headers.Authorization =
-                new AuthenticationHeaderValue("Bearer", _token);
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _token);
 
             return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }

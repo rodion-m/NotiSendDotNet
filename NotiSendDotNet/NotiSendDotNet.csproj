@@ -12,6 +12,7 @@
         <RepositoryType>public</RepositoryType>
         <README>https://github.com/rodion-m/NotiSendDotNet/blob/master/README.MD</README>
         <TargetFramework>net6.0</TargetFramework>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -27,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\NotiSendDotNet.Models\NotiSendDotNet.Models.csproj" />
+      <Folder Include="Models" />
     </ItemGroup>
 
 </Project>
